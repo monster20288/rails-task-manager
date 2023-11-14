@@ -9,6 +9,9 @@ Rails.application.routes.draw do
   # root "posts#index"
   #Show List of Tasks
   get "tasks", to: "tasks#index"
+  # Add task
+  get "tasks/new", to: "tasks#new" , as: :tasknew
   # Show List by id of Tasks
   get "tasks/:id", to: "tasks#show", as: :taskurl
+  post "tasks", to: "tasks#create"
 end
